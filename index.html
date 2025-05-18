@@ -1,20 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Free CV Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ET CV Generator | Pay 50 ETB</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>CV Generator</h1>
-    <form id="cvForm">
-      <input type="text" id="name" placeholder="Full Name">
-      <input type="email" id="email" placeholder="Email">
-      <textarea id="summary" placeholder="Professional Summary"></textarea>
-      <button type="button" onclick="generateCV()">Generate CV</button>
-    </form>
-    <div id="cvOutput"></div>
+    <!-- Auth Screens -->
+    <div id="authScreen">
+      <h1>Ethiopian CV Generator</h1>
+      <div id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="loginUser()">Login</button>
+        <p>No account? <a href="#" onclick="showRegister()">Register</a></p>
+      </div>
+      
+      <div id="registerForm" style="display:none">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="password" id="regPassword" placeholder="Password">
+        <button onclick="registerUser()">Register</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+      </div>
+    </div>
+
+    <!-- After Login -->
+    <div id="appScreen" style="display:none">
+      <div id="paymentSection">
+        <h2>Pay 50 ETB to Generate CV</h2>
+        <button onclick="initiatePayment()">Pay with Telebirr</button>
+      </div>
+      
+      <div id="cvForm" style="display:none">
+        <h2>Create Your CV</h2>
+        <input type="text" id="fullName" placeholder="Full Name">
+        <input type="text" id="phone" placeholder="Phone">
+        <textarea id="experience" placeholder="Work Experience"></textarea>
+        <button onclick="generateCV()">Download CV</button>
+      </div>
+    </div>
   </div>
+
+  <script src="firebase-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
