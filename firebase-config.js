@@ -1,12 +1,12 @@
 // Replace with your Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyAEzJ7GpEjLnFldkMaDO8yHagwQ654490Q",
-    authDomain: "ebook-d2d5d.firebaseapp.com",
-    projectId: "ebook-d2d5d",
-    storageBucket: "ebook-d2d5d.firebasestorage.app",
-    messagingSenderId: "326709138585",
-    appId: "1:326709138585:web:3e5b4f6c8390ce00a09408",
-    measurementId: "G-2Y2GTFZ2FQ"
+  apiKey: "AIzaSyCTqyN4RsgO8I2ejlz_rJn7DfqvBh0OhDI",
+  authDomain: "jobstation-b43d3.firebaseapp.com",
+  projectId: "jobstation-b43d3",
+  storageBucket: "jobstation-b43d3.firebasestorage.app",
+  messagingSenderId: "822682861338",
+  appId: "1:822682861338:web:400404b05918ebfc13f6a3",
+  measurementId: "G-JT88XXV9H4"
 };
 
 // Initialize Firebase
